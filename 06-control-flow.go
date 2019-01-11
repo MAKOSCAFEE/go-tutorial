@@ -2,7 +2,7 @@
  * @Author: Barnabas Makonda 
  * @Date: 2019-01-11 12:19:39 
  * @Last Modified by: Barnabas Makonda
- * @Last Modified time: 2019-01-11 17:05:02
+ * @Last Modified time: 2019-01-11 17:17:04
  */
 
 package main
@@ -95,6 +95,14 @@ func main(){
 		if i == 5 { continue } 
 		fmt.Println(i) // this will print all the numbers except 5.
 	}
+
+	// Scan
+
+	var ageNumber string;
+	fmt.Printf("How Old are you? ")
+	num, err := fmt.Scan(&ageNumber)
+	fmt.Printf(ageNumber)
+	fmt.Println(num, err)
 
 	
 }
