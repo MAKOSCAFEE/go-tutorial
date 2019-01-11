@@ -1,2 +1,3 @@
 # go-tutorial
-Collection of go tutorials
+
+Collection of go tutorials from cousera Go specialization.
