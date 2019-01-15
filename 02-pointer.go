@@ -22,7 +22,7 @@ import "fmt"
 */
 
 func main() {
-	var x int = 1
+	var x = 1
 	var y int
 
 	var ip *int // variable ip is the pointer to an interger

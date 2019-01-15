@@ -23,7 +23,7 @@ func main() {
 
 	// - Declare and assign
 
-	var secondNumber int = 2
+	var secondNumber = 2
 	var thirdNumber = 2 // here variabble is automatically assigned as int.
 
 	// - ShortHand definition for variable declaration.

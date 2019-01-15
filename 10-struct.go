@@ -1,3 +1,10 @@
+/*
+ * @Author: Barnabas Makonda
+ * @Date: 2019-01-15 22:46:56
+ * @Last Modified by:   Barnabas Makonda
+ * @Last Modified time: 2019-01-15 22:46:56
+ */
+
 package main
 
 import "fmt"
