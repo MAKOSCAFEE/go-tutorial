@@ -2,7 +2,7 @@
  * @Author: Barnabas Makonda
  * @Date: 2019-01-15 22:46:35
  * @Last Modified by: Barnabas Makonda
- * @Last Modified time: 2019-01-15 22:55:54
+ * @Last Modified time: 2019-01-15 23:05:36
  */
 
 package main
@@ -45,6 +45,14 @@ func add(args ...int) int {
 	return total
 }
 
+// Recursion - the ability of a function to call itself.
+func factorial(x uint) uint {
+	if x == 0 {
+		return 1
+	}
+	return x * factorial(x-1)
+}
+
 func main() {
 	xs := []float64{98, 93, 77, 82, 83}
 	fmt.Println(average(xs))
@@ -63,4 +71,7 @@ func main() {
 		return x
 	}
 	fmt.Println(increment())
+
+	fmt.Println(factorial(3))
+
 }
