@@ -1,8 +1,9 @@
 package main
 
-import ("io/ioutil"
-		"fmt"
-		"os"
+import (
+	"fmt"
+	"io/ioutil"
+	"os"
 )
 
 /* Basic operations.
@@ -13,7 +14,6 @@ import ("io/ioutil"
  * Seek - move read/write head
  */
 
-
 func main() {
 
 	// data is []byte filled with contents of the entire file. using Readfile explicit open/close are not needed
@@ -23,11 +23,11 @@ func main() {
 
 	dat := []byte("Hello, World")
 
-	_ =ioutil.WriteFile("out.txt", dat, 0777)
+	_ = ioutil.WriteFile("out.txt", dat, 0777)
 
-	_ =ioutil.WriteFile("outed.txt", data, 0777)
+	_ = ioutil.WriteFile("outed.txt", data, 0777)
 
-	// using os to open and reading 
+	// using os to open and reading
 
 	f, err := os.Open("out.txt")
 	barr := make([]byte, 10)

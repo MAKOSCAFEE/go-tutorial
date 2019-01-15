@@ -1,10 +1,9 @@
 /*
- * @Author: Barnabas Makonda 
- * @Date: 2019-01-11 10:13:57 
+ * @Author: Barnabas Makonda
+ * @Date: 2019-01-11 10:13:57
  * @Last Modified by: Barnabas Makonda
  * @Last Modified time: 2019-01-11 10:50:12
  */
-
 
 package main
 
@@ -23,7 +22,7 @@ import "fmt"
 */
 
 func main() {
-	var x int  = 1
+	var x int = 1
 	var y int
 
 	var ip *int // variable ip is the pointer to an interger
@@ -32,6 +31,5 @@ func main() {
 	y = *ip // y is now 1 as it derefferrence the pointer ip and return the data at address ip.
 
 	fmt.Println("Value of y is ", y)
-	
-}
 
+}

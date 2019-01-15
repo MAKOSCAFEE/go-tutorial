@@ -1,6 +1,6 @@
 /*
- * @Author: Barnabas Makonda 
- * @Date: 2019-01-11 12:19:39 
+ * @Author: Barnabas Makonda
+ * @Date: 2019-01-11 12:19:39
  * @Last Modified by: Barnabas Makonda
  * @Last Modified time: 2019-01-11 17:17:04
  */
@@ -23,12 +23,12 @@ import "fmt"
  * - Switch/Case
 		 A multi-way if statement. contains a tag which is a variable to be checked by comparing it to a constant defined in each case.
 		 case that match tag are executed.
- */
+*/
 
-func main(){
-	
+func main() {
+
 	x := 5
-	
+
 	// if control statements
 	if x > 6 {
 		fmt.Println("More than 6")
@@ -38,13 +38,13 @@ func main(){
 		fmt.Println("Something else")
 	}
 
-	/* for loop: 
-		eg. for <init>;<cond>;<update> {
-				<statement>	
-			}
+	/* for loop:
+	eg. for <init>;<cond>;<update> {
+			<statement>
+		}
 	*/
 
-	for i:= 0; i < 10; i++ {
+	for i := 0; i < 10; i++ {
 		fmt.Println(i)
 	}
 
@@ -56,15 +56,14 @@ func main(){
 		i++
 	}
 
-
 	// Switch/Case statement
 
 	number := 2
-    switch number {
-    case 1:
-        fmt.Println("one")
-    case 2:
-        fmt.Println("two")
+	switch number {
+	case 1:
+		fmt.Println("one")
+	case 2:
+		fmt.Println("two")
 	default:
 		fmt.Println(number)
 	}
@@ -74,35 +73,37 @@ func main(){
 	switch {
 	case x > 6:
 		fmt.Println("More than 6")
-	case x <2:
+	case x < 2:
 		fmt.Println("Less than 2")
 	default:
 		fmt.Println("Something else")
 	}
 
-
 	// Break and Continue. Break exits a containing for loop.
 	// Continue skips the rest of the current iteration.
 
 	// Break
-	for i:= 0; i < 10; i++ {
-		if i == 5 { break } 
-		fmt.Println(i)  // this will only print 0 to 4 and exit the loop when i== 5
+	for i := 0; i < 10; i++ {
+		if i == 5 {
+			break
+		}
+		fmt.Println(i) // this will only print 0 to 4 and exit the loop when i== 5
 	}
 
 	// Continue
-	for i:= 0; i < 10; i++ {
-		if i == 5 { continue } 
+	for i := 0; i < 10; i++ {
+		if i == 5 {
+			continue
+		}
 		fmt.Println(i) // this will print all the numbers except 5.
 	}
 
 	// Scan
 
-	var ageNumber string;
+	var ageNumber string
 	fmt.Printf("How Old are you? ")
 	num, err := fmt.Scan(&ageNumber)
 	fmt.Printf(ageNumber)
 	fmt.Println(num, err)
 
-	
 }

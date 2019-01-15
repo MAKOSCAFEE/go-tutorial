@@ -4,17 +4,17 @@ import "fmt"
 
 /*
  * A struct is aggregate data type. it groups together other objects of abitrary type.
- * 
+ *
  */
 
-func main(){
+func main() {
 
 	// Strut Person which agregate types of name, address and phone as fields of type Person
 
 	type Person struct {
-		name string
+		name    string
 		address string
-		phone string
+		phone   string
 	}
 
 	var tzPresident Person
@@ -22,7 +22,7 @@ func main(){
 	// Accessing the struct fields, we use dot notation
 	tzPresident.name = "John Pombe Magufuli"
 	tzPresident.address = "Magogoni street"
-	tzPresident.phone ="(222) 0 1234445"
+	tzPresident.phone = "(222) 0 1234445"
 
 	x := tzPresident.name
 

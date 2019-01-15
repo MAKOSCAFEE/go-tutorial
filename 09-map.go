@@ -10,8 +10,7 @@ import "fmt"
  * Accessing the value in the map youuse [key]. if not present it returns zero.
  */
 
-
-func main(){
+func main() {
 	// here key type is string and value type is int.
 	// this is declations and making a variable.
 	var idMap map[string]int
@@ -23,7 +22,7 @@ func main(){
 	idMap["joe"] = 20
 
 	// map literal
-	idMap2 := map[string]int {"joe": 45}
+	idMap2 := map[string]int{"joe": 45}
 
 	// map accessing
 	fmt.Println(idMap2["joe"]) // 20
@@ -33,9 +32,9 @@ func main(){
 
 	// deleting a key/value pair
 
-	delete(idMap, "joe") 
+	delete(idMap, "joe")
 
-	// Two Value assignement, 
+	// Two Value assignement,
 	// in this case id is value, p is presence of the key(will return true if key is in the map)
 
 	id, p := idMap2["jane"]
@@ -49,7 +48,5 @@ func main(){
 	for key, val := range idMap2 {
 		fmt.Println(key, val)
 	}
-
-
 
 }
