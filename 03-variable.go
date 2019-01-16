@@ -31,4 +31,13 @@ func main() {
 	message := "How are you? " // message is assigned "How are you" as value and automatically assigned string as datatype.
 
 	fmt.Println(firstNumber, isPython, secondNumber, thirdNumber, message)
+
+	// use new() key word
+
+	xPtr := new(int) // will return the address
+
+	*xPtr = 1 // dereferencing it and add value to the address
+
+	fmt.Println(*xPtr)
+
 }
