@@ -2,7 +2,7 @@
  * @Author: Barnabas Makonda
  * @Date: 2019-01-16 11:11:52
  * @Last Modified by: Barnabas Makonda
- * @Last Modified time: 2019-01-16 11:22:03
+ * @Last Modified time: 2019-01-16 11:26:14
  */
 
 package main
@@ -32,9 +32,14 @@ func (c *Circle) area() float64 {
 	return math.Pi * c.r * c.r
 }
 
+func (c *Circle) perimeter() float64 {
+	return 2 * math.Pi * c.r
+}
+
 // Shape Interface with a method
 type Shape interface {
 	area() float64
+	perimeter() float64
 }
 
 func distance(x1, y1, x2, y2 float64) float64 {
@@ -49,6 +54,12 @@ func (r *Rectangle) area() float64 {
 	return l * w
 }
 
+func (r *Rectangle) perimeter() float64 {
+	l := distance(r.x1, r.y1, r.x1, r.y2)
+	w := distance(r.x1, r.y1, r.x2, r.y1)
+	return 2 * (l + w)
+}
+
 // All argument must implement method area as interface Shape suggest.
 func totalArea(shapes ...Shape) float64 {
 	var area float64
@@ -58,9 +69,18 @@ func totalArea(shapes ...Shape) float64 {
 	return area
 }
 
+func totalPerimeter(shapes ...Shape) float64 {
+	var perimeter float64
+	for _, s := range shapes {
+		perimeter += s.perimeter()
+	}
+	return perimeter
+}
+
 func main() {
 	c := Circle{0, 0, 5}
 	r := Rectangle{0, 0, 10, 10}
 
 	fmt.Println(totalArea(&c, &r))
+	fmt.Println(totalPerimeter(&c, &r))
 }
